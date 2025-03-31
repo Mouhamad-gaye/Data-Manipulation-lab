@@ -50,17 +50,9 @@ subMenuEl.classList.add = 'flex-around'
 
 subMenuEl.style.top = '0'
 
-
-
-
-
-
-
-
-
-
-
 // Part 4
+
+
 
 let topMenuLinks = document.querySelectorAll('a')
 console.log(topMenuLinks)
@@ -72,69 +64,10 @@ function handleClick(e) {
     console.log('not A')
     return
   }
-  console.log('A')
-
+  // console.log('A')
+  topMenuLinks.forEach(link => link.classList.remove('active')); 
+  e.target.classList.toggle('active'); 
 }
-topMenuLinks.forEach(link => {
-  link.addEventListener("click", handleClick)
-})
-
-//     e.preventDefault();
-
-//     link.classList.remove("active"));
-
-//   if (!link.classList.contains("active")) {
-//     link.classList.add("active");
-//   }
-// });
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// topMenuLinks.forEach(link => {
-// // console.log(topMenuLinks)
-// link.addEventListener('click', handleClick)
-// link.classList.add('active')
-// console.log(link)
-// })
-
-
-
-// //   topMenuLinks.forEach(link => link.classList.remove('active'))
-// //   
-// //   
-// //   console.log(link)
-
-// //   // if (link.classList.remove('active')) {
-// //   //   console.log(link)
-// //   // //   link.classList.remove('active');
-// //   // // } else {
-
-// //   // }
-// // })
-
-
 
 menuLinks.forEach((link) => {
   let newAnc = document.createElement('a')
@@ -142,6 +75,13 @@ menuLinks.forEach((link) => {
   newAnc.textContent = link.text;
   topMenuEl.appendChild(newAnc)
 })
+
+
+
+
+
+
+
 
 
 
